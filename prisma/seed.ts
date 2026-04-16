@@ -14,21 +14,24 @@ async function main() {
       initial: "DA",
       name: "Dina A.",
       role: "Mahasiswa Psikologi UI",
-      bgClass: "bg-blue-500/30",
+      bgClass: "#3b82f6",
+      rating: 5,
     },
     {
       text: '"Tugas kuliah numpuk, saya order 3 makalah sekaligus. Hasilnya memuaskan, nggak ada revisi berarti. Thank you GasJoki!"',
       initial: "RA",
       name: "Rizky F.",
       role: "Teknik Informatika ITB",
-      bgClass: "bg-orange-500/30",
+      bgClass: "#f97316",
+      rating: 5,
     },
     {
       text: '"Awalnya ragu, ternyata amanah banget. Olah data SPSS selesai 3 jam, dan dijelasin step by step. Top markotop!"',
       initial: "SN",
       name: "Siti N.",
       role: "Ekonomi UGM",
-      bgClass: "bg-blue-500/30",
+      bgClass: "#3b82f6",
+      rating: 4,
     },
   ];
 

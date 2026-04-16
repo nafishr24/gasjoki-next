@@ -18,6 +18,7 @@ model Testimonial {
   name      String
   role      String
   initial   String
-  bgClass   String?  @default("bg-blue-500/30")
+  bgClass   String?  @default("#3b82f6")
+  rating    Int      @default(5)
   createdAt DateTime @default(now())
 }

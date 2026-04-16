@@ -118,6 +118,9 @@ function Button({ children, variant = 'primary', fullWidth, className = '', ...p
         case 'close':
             variantClasses = "bg-slate-800 p-1.5 rounded-full text-slate-400 hover:text-white transition-colors transform-none";
             break;
+        case 'animated-gradient':
+            variantClasses = "relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 bg-[length:200%_100%] animate-gradient-flow text-white font-bold py-3 px-8 rounded-full shadow-xl transform hover:scale-105 transition-all";
+            break;
         case 'unstyled':
             variantClasses = "";
             break;
@@ -129,7 +132,7 @@ function Button({ children, variant = 'primary', fullWidth, className = '', ...p
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/ui/Button.tsx",
-        lineNumber: 50,
+        lineNumber: 53,
         columnNumber: 5
     }, this);
 }

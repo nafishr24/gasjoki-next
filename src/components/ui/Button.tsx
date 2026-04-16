@@ -1,6 +1,6 @@
 import { type ButtonHTMLAttributes } from 'react';
 
-export type ButtonVariant = 'primary' | 'orange' | 'gradient' | 'dark' | 'outlineOrange' | 'outlineBlue' | 'floatingGreen' | 'floatingBlue' | 'close' | 'unstyled';
+export type ButtonVariant = 'primary' | 'orange' | 'gradient' | 'dark' | 'outlineOrange' | 'outlineBlue' | 'floatingGreen' | 'floatingBlue' | 'close' | 'unstyled' | 'animated-gradient';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
@@ -38,6 +38,9 @@ export default function Button({ children, variant = 'primary', fullWidth, class
       break;
     case 'close':
       variantClasses = "bg-slate-800 p-1.5 rounded-full text-slate-400 hover:text-white transition-colors transform-none";
+      break;
+    case 'animated-gradient':
+      variantClasses = "relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-orange-500 bg-[length:200%_100%] animate-gradient-flow text-white font-bold py-3 px-8 rounded-full shadow-xl transform hover:scale-105 transition-all";
       break;
     case 'unstyled':
       variantClasses = "";

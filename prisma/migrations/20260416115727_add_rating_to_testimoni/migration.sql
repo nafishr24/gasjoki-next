@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Testimonial" ADD COLUMN     "rating" INTEGER NOT NULL DEFAULT 5,
+ALTER COLUMN "bgClass" SET DEFAULT '#3b82f6';
