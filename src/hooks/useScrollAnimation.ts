@@ -22,16 +22,7 @@ export default function useScrollAnimation() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const el = entry.target as HTMLElement;
-            const targetStr = el.getAttribute("data-target");
-            const target = targetStr ? parseInt(targetStr, 10) : 0;
-            
-            // Validate that parsed value is a valid number
-            if (isNaN(target) || target <= 0) {
-              el.innerText = "0";
-              obs.unobserve(el);
-              return;
-            }
-            
+            const target = parseInt(el.getAttribute("data-target") || "0");
             let current = 0;
             const increment = target / 45;
             const updateCounter = () => {

@@ -5,17 +5,6 @@ import { X, Star } from "lucide-react";
 import Button from "../components/ui/Button";
 import { createTestimonial } from "../app/actions/testimonial";
 
-interface Testimonial {
-  id: number;
-  text: string;
-  name: string;
-  role: string;
-  initial: string;
-  bgClass: string;
-  rating: number;
-  createdAt: Date;
-}
-
 export default function TestiForm({
   isOpen,
   onClose,
@@ -23,7 +12,7 @@ export default function TestiForm({
 }: {
   isOpen: boolean;
   onClose: () => void;
-  onSuccess: (testi: Testimonial) => void;
+  onSuccess: (testi: any) => void;
 }) {
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
@@ -89,7 +78,6 @@ export default function TestiForm({
               <input
                 type="text"
                 required
-                maxLength={100}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Contoh: Dina Ananda"
@@ -104,7 +92,6 @@ export default function TestiForm({
               <input
                 type="text"
                 required
-                maxLength={100}
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
                 placeholder="Contoh: Universitas Indonesia"
@@ -143,7 +130,6 @@ export default function TestiForm({
               <textarea
                 required
                 rows={4}
-                maxLength={1000}
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder="Ceritakan pengalamanmu menggunakan layanan kami..."

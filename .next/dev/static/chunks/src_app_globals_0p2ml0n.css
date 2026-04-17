@@ -1802,7 +1802,7 @@ body {
 
 @media (max-width: 768px) {
   .animate-marquee {
-    animation: 7s linear infinite marquee;
+    animation: 30s linear infinite marquee;
   }
 }
 
@@ -1812,7 +1812,7 @@ body {
 
 @media (max-width: 768px) {
   .animate-marquee-reverse {
-    animation: 7s linear infinite marquee-reverse;
+    animation: 30s linear infinite marquee-reverse;
   }
 }
 
@@ -1825,7 +1825,7 @@ body {
   scrollbar-width: none;
 }
 
-.pause-on-hover:hover .animate-marquee, .pause-on-hover:hover .animate-marquee-reverse {
+.pause-on-hover:hover .animate-marquee, .pause-on-hover:hover .animate-marquee-reverse, .pause-on-hover:active .animate-marquee, .pause-on-hover:active .animate-marquee-reverse {
   animation-play-state: paused;
 }
 
@@ -2014,6 +2014,10 @@ body {
 
   .md\:items-start {
     align-items: flex-start;
+  }
+
+  .md\:overflow-hidden {
+    overflow: hidden;
   }
 
   .md\:p-10 {
