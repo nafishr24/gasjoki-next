@@ -33,7 +33,7 @@ export default function TestimoniClient({
       </div>
 
       {testimonies.length > 0 ? (
-        <div className="relative group pause-on-hover w-full overflow-hidden cursor-grab active:cursor-grabbing">
+        <div className="relative group pause-on-hover w-full overflow-x-auto md:overflow-hidden scrollbar-hide cursor-grab active:cursor-grabbing">
           <div className="flex animate-marquee gap-6 py-4 w-max flex-nowrap">
             {/* First Set */}
             <div className="flex gap-6 shrink-0 px-3">
