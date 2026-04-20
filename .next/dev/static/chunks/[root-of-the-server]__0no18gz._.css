@@ -1057,6 +1057,12 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.scale-95 {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1839,6 +1845,12 @@ body {
 
 .transition-colors {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-duration: .15s;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+
+.transition-opacity {
+  transition-property: opacity;
   transition-duration: .15s;
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }

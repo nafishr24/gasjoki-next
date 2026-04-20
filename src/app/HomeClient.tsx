@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { MessageCircle, HelpCircle } from "lucide-react";
 import useScrollAnimation from "../hooks/useScrollAnimation";
 import OrderForm from "../components/modals/OrderForm";

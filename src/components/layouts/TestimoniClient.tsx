@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { Testimonial } from "@prisma/client";
 import { Plus, Star } from "lucide-react";
 import Button from "../ui/Button";
-import TestiForm from "../../modals/TestiForm";
+import TestiForm from "../modals/TestiForm";
 
 const maskName = (name: string) => {
   if (!name) return "";
@@ -34,7 +34,7 @@ export default function TestimoniClient({
 
   return (
     <div className="container mx-auto px-4 max-w-7xl overflow-hidden flex flex-col items-center">
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 reveal">
         <h2 className="text-4xl font-extrabold text-white">
           💬 Apa Kata <span className="gradient-text">Mereka?</span>
         </h2>
@@ -44,8 +44,8 @@ export default function TestimoniClient({
       </div>
 
       {testimonies.length > 0 ? (
-        <div className="relative group pause-on-hover w-full overflow-x-auto md:overflow-hidden scrollbar-hide cursor-grab active:cursor-grabbing">
-          <div className="flex animate-marquee gap-6 py-4 w-max flex-nowrap">
+        <div className="relative group pause-on-hover w-full overflow-x-auto md:overflow-hidden scrollbar-hide cursor-grab active:cursor-grabbing reveal">
+          <div className="flex animate-marquee py-4 w-max flex-nowrap">
             {/* First Set */}
             <div className="flex gap-6 shrink-0 px-3">
               {testimonies.map((testi) => (
@@ -118,7 +118,7 @@ export default function TestimoniClient({
         <p className="text-center text-slate-400 italic">Belum ada testimoni.</p>
       )}
 
-      <div className="mt-8 text-center">
+      <div className="mt-8 text-center reveal">
         <Button 
           variant="animated-gradient" 
           onClick={() => setIsModalOpen(true)}

@@ -50,10 +50,10 @@ export default function Hero({ scrollToLayanan }: HeroProps) {
       <div className="absolute top-40 -left-32 w-96 h-96 bg-blue-600/20 rounded-full blur-[130px]"></div>
       <div className="absolute bottom-20 right-0 w-80 h-80 bg-orange-500/15 rounded-full blur-[120px]"></div>
       <div className="container mx-auto text-center relative z-10">
-        <div className="inline-block px-4 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-sm font-semibold backdrop-blur-sm mb-6">
+        <div className="inline-block px-4 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-sm font-semibold backdrop-blur-sm mb-6 reveal">
           ⚡ 24/7 Siap Bantu ⚡
         </div>
-        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-white">
+        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 text-white reveal">
           BUAT APA{" "}
           <span className="text-orange-500 underline decoration-blue-500 decoration-4">
             PUSING
@@ -61,17 +61,17 @@ export default function Hero({ scrollToLayanan }: HeroProps) {
           <br />
           & BEGADANG?!
         </h1>
-        <div className="text-xl md:text-2xl text-slate-300 mb-4">
+        <div className="text-xl md:text-2xl text-slate-300 mb-4 reveal">
           <span id="typewriter" className="font-bold text-blue-400">
             {typedText}
           </span>
           <span className="typed-cursor"></span>
         </div>
-        <p className="text-base md:text-lg text-slate-400 max-w-2xl mx-auto mb-8">
+        <p className="text-base md:text-lg text-slate-400 max-w-2xl mx-auto mb-8 reveal">
           Ratusan mahasiswa & pelajar sudah terbantu. Dapatkan nilai maksimal
           tanpa ribet. <span className="text-orange-400 font-bold">#GasTerus</span>
         </p>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4 reveal">
           <Button
             variant="orange"
             onClick={scrollToLayanan}
