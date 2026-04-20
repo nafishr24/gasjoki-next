@@ -1,5 +1,18 @@
 {
-  "node": {},
+  "node": {
+    "40b7cf3db22e653516460c4f3ec45b9c078f484b1d": {
+      "workers": {
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/testimonial.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "createTestimonial",
+          "filename": "src/app/actions/testimonial.ts"
+        }
+      },
+      "filename": "src/app/actions/testimonial.ts",
+      "exportedName": "createTestimonial"
+    }
+  },
   "edge": {},
   "encryptionKey": "fFMlJjsqUpKSPUv0buxg1Q5BtLK5BRDXMMjAu/Rq/Is="
 }

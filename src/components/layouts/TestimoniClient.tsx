@@ -6,6 +6,17 @@ import { Plus, Star } from "lucide-react";
 import Button from "../ui/Button";
 import TestiForm from "../../modals/TestiForm";
 
+const maskName = (name: string) => {
+  if (!name) return "";
+  return name
+    .split(" ")
+    .map((word) => {
+      if (word.length <= 1) return word;
+      return word[0] + "*".repeat(word.length - 1);
+    })
+    .join(" ");
+};
+
 export default function TestimoniClient({ 
   initialTestimonials 
 }: { 
@@ -59,7 +70,7 @@ export default function TestimoniClient({
                       {testi.initial}
                     </div>
                     <div className="overflow-hidden">
-                      <p className="font-bold text-white truncate text-sm">{testi.name}</p>
+                      <p className="font-bold text-white truncate text-sm">{maskName(testi.name)}</p>
                       <p className="text-xs text-slate-400 truncate">{testi.role}</p>
                     </div>
                   </div>
@@ -90,7 +101,7 @@ export default function TestimoniClient({
                       {testi.initial}
                     </div>
                     <div className="overflow-hidden">
-                      <p className="font-bold text-white truncate text-sm">{testi.name}</p>
+                      <p className="font-bold text-white truncate text-sm">{maskName(testi.name)}</p>
                       <p className="text-xs text-slate-400 truncate">{testi.role}</p>
                     </div>
                   </div>

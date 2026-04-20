@@ -1,8 +1,10 @@
 import prisma from "@/lib/prisma";
 import type { Testimonial } from "@prisma/client";
 import TestimoniClient from "./TestimoniClient";
+import { unstable_noStore as noStore } from "next/cache";
 
 export default async function Testimoni() {
+  noStore();
   let testimonies: Testimonial[] = [];
   
   try {

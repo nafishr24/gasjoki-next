@@ -59,8 +59,8 @@ var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
 ;
 async function createTestimonial(formData) {
     try {
-        // Generate initial from name
-        const initial = formData.name.split(" ").map((n)=>n[0]).join("").toUpperCase().slice(0, 2);
+        // Generate initial from name safely
+        const initial = formData.name.trim().split(/\s+/).map((n)=>n[0] || "").join("").toUpperCase().slice(0, 2) || "?";
         const testimonial = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].testimonial.create({
             data: {
                 name: formData.name,

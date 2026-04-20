@@ -11,13 +11,14 @@ export async function createTestimonial(formData: {
   bgClass: string;
 }) {
   try {
-    // Generate initial from name
+    // Generate initial from name safely
     const initial = formData.name
-      .split(" ")
-      .map((n) => n[0])
+      .trim()
+      .split(/\s+/)
+      .map((n) => n[0] || "")
       .join("")
       .toUpperCase()
-      .slice(0, 2);
+      .slice(0, 2) || "?";
 
     const testimonial = await prisma.testimonial.create({
       data: {
