@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "GasJoki",
     images: [
       {
-        url: "https://drive.google.com/uc?export=view&id=1hY47JjFjupiYnOeNZjtF9kToYBEUoC4m",
+        url: "https://res.cloudinary.com/dyplzsvpr/image/upload/f_auto,q_auto/open-graph-image_omhwpf",
         width: 1200,
         height: 630,
         alt: "GasJoki Thumbnail Image",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "GasJoki - Jasa Joki Tugas Terpercaya",
     description: "Layanan joki tugas profesional dan terpercaya untuk berbagai jenjang pendidikan",
-    images: ["https://drive.google.com/uc?export=view&id=1hY47JjFjupiYnOeNZjtF9kToYBEUoC4m"],
+    images: ["https://res.cloudinary.com/dyplzsvpr/image/upload/f_auto,q_auto/open-graph-image_omhwpf"],
   },
 };
 
