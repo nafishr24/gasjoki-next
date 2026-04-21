@@ -9,11 +9,14 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "GasJoki - Jasa Joki Tugas Terpercaya",
-  description: "Layanan joki tugas profesional dan terpercaya untuk berbagai jenjang pendidikan",
+  title: "GasJoki - Jasa Joki Tugas Seluruh Jenjang",
+  description: "Layanan joki tugas profesional dan terpercaya untuk seluruh jenjang pendidikan, bantu selesaikan masalah akademikmu dengan cepat dan akurat.",
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
-    title: "GasJoki - Jasa Joki Tugas Terpercaya",
-    description: "Layanan joki tugas profesional dan terpercaya untuk berbagai jenjang pendidikan",
+    title: "GasJoki - Jasa Joki Tugas Seluruh Jenjang",
+    description: "Layanan joki tugas profesional dan terpercaya untuk seluruh jenjang pendidikan, bantu selesaikan masalah akademikmu dengan cepat dan akurat.",
     url: "https://gasjoki-next.vercel.app",
     siteName: "GasJoki",
     images: [
@@ -29,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GasJoki - Jasa Joki Tugas Terpercaya",
-    description: "Layanan joki tugas profesional dan terpercaya untuk berbagai jenjang pendidikan",
+    title: "GasJoki - Jasa Joki Tugas Seluruh Jenjang",
+    description: "Layanan joki tugas profesional dan terpercaya untuk seluruh jenjang pendidikan, bantu selesaikan masalah akademikmu dengan cepat dan akurat.",
     images: ["https://res.cloudinary.com/dyplzsvpr/image/upload/f_auto,q_auto/open-graph-image_omhwpf"],
   },
 };
