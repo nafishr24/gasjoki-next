@@ -1,3 +1,5 @@
 {
+  "/api/schools/search/route": "app/api/schools/search/route.js",
+  "/api/universities/search/route": "app/api/universities/search/route.js",
   "/page": "app/page.js"
 }

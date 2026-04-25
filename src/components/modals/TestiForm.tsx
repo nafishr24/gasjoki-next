@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { X, Star } from "lucide-react";
 import Button from "../ui/Button";
 import { createTestimonial } from "../../app/actions/testimonial";
+import InstitutionSearch from "../ui/InstitutionSearch";
 
 export default function TestiForm({
   isOpen,
@@ -107,13 +108,9 @@ export default function TestiForm({
               <label className="block text-sm font-medium text-slate-400 mb-1">
                 Asal Sekolah / Kampus
               </label>
-              <input
-                type="text"
-                required
+              <InstitutionSearch
                 value={role}
-                onChange={(e) => setRole(e.target.value)}
-                placeholder="Contoh: Universitas Indonesia"
-                className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                onChange={setRole}
               />
             </div>
 
