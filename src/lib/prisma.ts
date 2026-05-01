@@ -1,14 +1,22 @@
 import { PrismaClient } from "@prisma/client";
+import { Pool } from "pg";
 import { PrismaPg } from "@prisma/adapter-pg";
-import pg from "pg";
+import dns from "dns";
+
+// Force IPv4 to prevent connection hangs on dual-stack systems
+dns.setDefaultResultOrder("ipv4first");
+
+// Use DIRECT_URL (port 5432) as the pooler port (6543) is unreachable locally
+const connectionString =
+  process.env.DIRECT_URL || process.env.DATABASE_URL || "";
+
+const pool = new Pool({
+  connectionString,
+  connectionTimeoutMillis: 5000,
+});
+const adapter = new PrismaPg(pool);
 
 const prismaClientSingleton = () => {
-  const connectionString = process.env.DATABASE_URL;
-  if (!connectionString) {
-    throw new Error("DATABASE_URL is not defined in environment variables");
-  }
-  const pool = new pg.Pool({ connectionString });
-  const adapter = new PrismaPg(pool);
   return new PrismaClient({ adapter });
 };
 

@@ -12,7 +12,7 @@ R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_forbidde
 R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_unauthorized_0cjv-23.js")
 R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_0lgvd_..js")
 R.c("server/chunks/ssr/_0j45~lw._.js")
-R.c("server/chunks/ssr/[root-of-the-server]__11muyy~._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__08fhih7._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_0.po8je._.js")
 R.m(99726)
 module.exports=R.m(99726).exports
