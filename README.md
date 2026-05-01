@@ -1,153 +1,104 @@
-# GasJoki.id - Website Landing Page
+# GasJoki.id - Website Layanan Joki Tugas
 
-## Deskripsi Proyek
+## 1. Proyek Apakah Ini?
 
-GasJoki.id adalah website landing page untuk layanan joki tugas (ghostwriting) profesional yang membantu siswa dan mahasiswa menyelesaikan tugas sekolah, kuliah, skripsi, tesis, dan berbagai jenis tugas akademik lainnya. Website ini menawarkan layanan cepat, aman, anti-plagiarisme, dengan jaminan nilai memuaskan.
+GasJoki.id adalah website *landing page* dan platform layanan joki tugas (ghostwriting) profesional yang membantu siswa dan mahasiswa untuk menyelesaikan berbagai jenis tugas akademik, mulai dari tingkat sekolah menengah, sarjana, hingga pascasarjana. Website ini awalnya dibangun sebagai halaman statis (SPA), namun kini telah berevolusi menjadi web aplikasi *fullstack* agar dapat menghadirkan interaktifitas yang aman dan dinamis, seperti:
+- **Testimoni Dinamis**: Pengguna dapat memberikan testimoni dan *rating* yang langsung tersimpan ke basis data secara *real-time*.
+- **Pencarian Institusi**: Terintegrasi dengan API data institusi nasional (`api.co.id`) untuk memberikan autocompletion nama kampus dan sekolah se-Indonesia ketika pelanggan mengisi form ulasan.
+- **Form Pemesanan Pintar**: Menyediakan alur terstruktur untuk mendeskripsikan spesifikasi tugas yang mengarah langsung ke WhatsApp customer service dengan format chat otomatis.
 
-Website ini dibangun sebagai single-page application (SPA) yang responsif dan modern, dengan fokus pada user experience yang baik untuk menarik pelanggan potensial.
+## 2. Tech Stack (Teknologi yang Digunakan)
 
-## Teknologi yang Digunakan
+Proyek ini dibangun menggunakan arsitektur modern berbasis SSR (Server-Side Rendering) dan API Routes untuk keamanan data dan performa loading (SEO yang lebih baik).
 
-Proyek ini dibangun menggunakan teknologi modern untuk pengembangan web:
+### Frontend
+- **Framework Utama**: [Next.js 16](https://nextjs.org/) (menggunakan App Router)
+- **Library Antarmuka**: [React 19](https://react.dev/)
+- **Bahasa**: [TypeScript](https://www.typescriptlang.org/) untuk *type safety* penuh
+- **Styling**: [Tailwind CSS 3.4](https://tailwindcss.com/)
+- **Ikonografi**: [Lucide React](https://lucide.dev/)
 
-### Frontend Framework
+### Backend & Datastore
+- **Server Environment**: Next.js Node.js (melalui Server Components & Server Actions)
+- **Database Relasional**: [PostgreSQL](https://www.postgresql.org/) (Di-host sepenuhnya oleh [Supabase](https://supabase.com/))
+- **ORM / Database Client**: [Prisma](https://www.prisma.io/) (Menggunakan driver `@prisma/adapter-pg` untuk optimasi koneksi *pooling*)
+- **Third-Party API**: `api.co.id` untuk pencarian endpoint direktori institusi pendidikan.
 
-- **React 19** - Library JavaScript untuk membangun antarmuka pengguna
-- **TypeScript** - Superset JavaScript yang menambahkan type safety
+### Pengembangan & Build
+- **Linter**: ESLint & TypeScript ESLint
+- **Server Deployment Target**: Disarankan menggunakan Vercel agar mendukung arsitektur Serverless mutakhir.
 
-### Build Tool & Development
+## 3. Struktur Folder Utama
 
-- **Vite** - Build tool cepat untuk pengembangan modern
-- **ESLint** - Linter untuk menjaga kualitas kode
-- **TypeScript ESLint** - Aturan linting khusus untuk TypeScript
-
-### Styling & UI
-
-- **Tailwind CSS** - Framework CSS utility-first untuk styling cepat
-- **PostCSS** - Tool untuk memproses CSS
-- **Autoprefixer** - Plugin PostCSS untuk menambahkan vendor prefixes otomatis
-
-### Icon Library
-
-- **Lucide React** - Library ikon modern dan konsisten
-
-### Development Dependencies
-
-- **@vitejs/plugin-react** - Plugin Vite untuk React
-- **@types/react** & **@types/react-dom** - Type definitions untuk React
-- **@types/node** - Type definitions untuk Node.js
-
-## Fitur Utama
-
-- **Landing Page Responsif** - Desain yang menarik dan mobile-friendly
-- **Form Pemesanan** - Integrasi dengan WhatsApp untuk komunikasi langsung
-- **FAQ Modal** - Jawaban untuk pertanyaan umum pelanggan
-- **Animasi & Efek** - Smooth scrolling, typing effect, dan transisi
-- **SEO Optimized** - Meta tags dan Open Graph untuk sharing sosial
-- **Performance Optimized** - Build dengan Vite untuk loading cepat
-
-## Struktur Proyek
-
-```
-joki/
-├── public/
-│   └── images/          # Gambar dan aset statis
+```text
+gasjoki/
+├── prisma/
+│   ├── migrations/         # Folder riwayat revisi skema database
+│   ├── schema.prisma       # Definisi model tabel struktur tabel Supabase
+│   └── seed.ts             # Script seeding data sampel testimoni ke dalam database
+├── public/                 # Direktori file statis yang diakses secara publik
+│   └── images/             # Gambar pendukung desain UI
 ├── src/
-│   ├── assets/          # Aset internal (jika ada)
-│   ├── components/      # Komponen React
-│   │   ├── FAQModal.tsx # Modal FAQ
-│   │   └── OrderForm.tsx # Form pemesanan
-│   ├── App.tsx          # Komponen utama aplikasi
-│   ├── App.css          # Styling utama
-│   ├── index.css        # CSS global
-│   └── main.tsx         # Entry point aplikasi
-├── index.html           # Template HTML utama
-├── package.json         # Dependencies dan scripts
-├── vite.config.ts       # Konfigurasi Vite
-├── tailwind.config.js   # Konfigurasi Tailwind CSS
-├── postcss.config.js    # Konfigurasi PostCSS
-├── tsconfig.json        # Konfigurasi TypeScript
-├── eslint.config.js     # Konfigurasi ESLint
-└── README.md            # Dokumentasi proyek (file ini)
+│   ├── app/                # Direktori jantung dari Next.js App Router
+│   │   ├── actions/        # Pengeksekusi "Server Actions" (Logika input form/buat testimoni)
+│   │   ├── api/            # API Routes (sebagai proxy API.co.id, menghindari kebocoran token)
+│   │   ├── favicon.ico
+│   │   ├── globals.css     # Deklarasi Tailwind directives 
+│   │   ├── layout.tsx      # Komponen kerangka (Root) untuk header metadata aplikasi
+│   │   └── page.tsx        # Halaman Landing Page Utama (Homepage)
+│   ├── components/         # Direktori kumpulan modul komponen
+│   │   ├── layouts/        # Komponen blok layout per-section (Navbar, Testimoni, Hero)
+│   │   ├── modals/         # Popup komponen layer atas (Form Testimoni, FAQ, dsb)
+│   │   └── ui/             # Komponen kecil guna-ulang (Button, InstitutionSearch bar)
+│   └── lib/                # Konfigurasi logic pembantu seperti integrasi object utama Prisma
+├── .env                    # (Tersembunyi) Pengaturan Variabel aman/credentials (URL, API KEY)
+├── next.config.ts          # Konfigurasi bundler proyek berbasis Next.js
+├── package.json            # Repositori library, versi aplikasi, serta shortcut npm (dev, build)
+├── tailwind.config.js      # File deklarasi preset penyesuaian khusus framework Tailwind CSS
+└── tsconfig.json           # Setelan compiler aturan deteksi error dari TypeScript
 ```
 
-## Instalasi dan Menjalankan
+## 4. Diagram Alir Tech Stack
 
-### Prasyarat
+Arsitektur di bawah ini memvisualisasikan bagaimana komunikasi teknologi tersebut terjadi secara berdampingan.
 
-- Node.js (versi 16 atau lebih baru)
-- npm atau yarn
+```mermaid
+flowchart TD
+    %% Pendefinisian Tiap Node entitas
+    User([Pelanggan / Pengunjung Web])
+    Client[Next.js Client Components\nReact 19 + Tailwind CSS]
+    Server[Next.js Server / Server Actions\nNode.js Runtime]
+    API[Next.js Server API Routes\n/api/schools/search]
+    Prisma[(Prisma ORM)]
+    Supabase[(Supabase\nPostgreSQL SQL Database)]
+    ExternalAPI[Third Party API\napi.co.id]
+    WA([Customer Service\nWhatsApp API])
 
-### Langkah Instalasi
+    %% Interaksi Client Secara Langsung
+    User -- "Akses Layar\n(Membuka Situs)" --> Client
+    User -- "Klik 'Pesan Joki'" --> WA
 
-1. **Clone repository** (jika dari Git)
+    %% Alur Kerja Pengumpulan Data Keamanan
+    Client -- "Ketik Asal Kampus/Sekolah\n(Fetch Request)" --> API
+    Client -- "Isi & Simpan Testimoni\n(Panggil Server Action)" --> Server
+    
+    %% Siklus API External
+    API -- "Kirim Query Proxy" --> ExternalAPI
+    ExternalAPI -- "Kembalikan Data JSON" --> API
+    API -- "Tampilkan Autocomplete\ndi Dropdown" --> Client
 
-   ```bash
-   git clone <repository-url>
-   cd joki
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   npm install
-   ```
-
-3. **Jalankan development server**
-
-   ```bash
-   npm run dev
-   ```
-
-   Server akan berjalan di `http://localhost:5173` (port default Vite)
-
-### Build untuk Production
-
-```bash
-npm run build
+    %% Siklus Database
+    Server -- "Kirim Data / Minta Data" --> Prisma
+    Prisma -- "Compile SQL Queries" --> Supabase
+    Supabase -- "Balikan Result / Success" --> Prisma
+    Prisma -- "Resolusi Data Typed" --> Server
+    Server -- "Proses & Kirim HTML\nkepada Layar Pengguna" --> Client
 ```
 
-File build akan tersimpan di folder `dist/`
-
-### Preview Build
-
-```bash
-npm run preview
-```
-
-### Linting
-
-```bash
-npm run lint
-```
-
-## Scripts yang Tersedia
-
-- `npm run dev` - Jalankan development server dengan hot reload
-- `npm run build` - Build aplikasi untuk production
-- `npm run preview` - Preview build production secara lokal
-- `npm run lint` - Jalankan ESLint untuk memeriksa kode
-
-## Kontribusi
-
-1. Fork repository
-2. Buat branch fitur baru (`git checkout -b feature/AmazingFeature`)
-3. Commit perubahan (`git commit -m 'Add some AmazingFeature'`)
-4. Push ke branch (`git push origin feature/AmazingFeature`)
-5. Buat Pull Request
-
-## Lisensi
-
-Proyek ini bersifat privat dan tidak untuk distribusi publik.
-
-## Kontak
-
-Untuk informasi lebih lanjut atau pertanyaan:
-
-- Website: [GasJoki.id](https://gasjoki.id)
-- WhatsApp: +62 877-0133-0823
-- Email: info@gasjoki.id
+### Penjelasan Diagram Singkat
+1. **Render Awal (Fetch Database)**: Saat `User` memuat halaman website, bagian server Next.js membaca data testimoni tersimpan via **Prisma ORM**, yang menyambung langsung dengan instance **Supabase Postgres**. Halaman SSR dengan struktur **Tailwind UI** diterjemahkan ke peramban.
+2. **Pencarian API Proxy**: Karena tidak aman mengekspos kata kunci API eksternal langsung dari *browser*, input sekolah diproses oleh form di *Client*. Setelah pengguna baru mengetikkan lebih dari 5 huruf, sinyal request dikirim ke perantara **Next.js API Route**, baru diteruskan ke **api.co.id** (*External API*) untuk mendapat rekomendasi Dropdown Autocomplete.
+3. **Server Action Form**: Saat form pembuatan testimoni diselesaikan, isian terkirim aman ke *Next.js Server Action* yang kemudian memakai konektivitas **Prisma** untuk meregistrasikan baris baru tersebut secara otomatis di pangkalan data backend.
 
 ---
-
-**Catatan:** Website ini dirancang khusus untuk bisnis joki tugas dan mengikuti praktik etika bisnis yang berlaku. Pastikan untuk mematuhi hukum dan regulasi setempat terkait layanan akademik.
+**Disclaimer Hukum:** Platform layanan ini memiliki standar kode integritas dan etika yang kuat. Pastikan untuk selalu mematuhi hukum privasi data pada operasional server serta regulasi pendidikan di wilayah Anda masing-masing terkait kompilasi materi tugas klien.
