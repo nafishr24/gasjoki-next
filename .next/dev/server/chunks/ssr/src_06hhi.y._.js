@@ -1854,16 +1854,17 @@ function InstitutionSearch({ value, onChange }) {
                                         lineNumber: 197,
                                         columnNumber: 21
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    (item.regency || item.district) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "text-[11px] text-slate-500 group-hover:text-slate-400 mt-0.5 transition-colors",
                                         children: [
-                                            item.regency || "Lokasi tidak tersedia",
-                                            item.district ? ` - ${item.district}` : ""
+                                            item.regency || "",
+                                            item.regency && item.district ? " - " : "",
+                                            item.district || ""
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                                        lineNumber: 200,
-                                        columnNumber: 21
+                                        lineNumber: 201,
+                                        columnNumber: 23
                                     }, this)
                                 ]
                             }, void 0, true, {
@@ -1887,12 +1888,12 @@ function InstitutionSearch({ value, onChange }) {
                         children: "Tidak ditemukan. Kamu bisa lanjut ketik manual."
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                        lineNumber: 210,
+                        lineNumber: 213,
                         columnNumber: 15
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                    lineNumber: 209,
+                    lineNumber: 212,
                     columnNumber: 13
                 }, this) : null
             }, void 0, false, {

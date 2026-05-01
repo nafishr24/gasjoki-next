@@ -197,10 +197,13 @@ export default function InstitutionSearch({ value, onChange }: InstitutionSearch
                     <div className="text-sm text-slate-300 group-hover:text-white font-medium transition-colors">
                       {item.name}
                     </div>
-                    <div className="text-[11px] text-slate-500 group-hover:text-slate-400 mt-0.5 transition-colors">
-                      {item.regency || "Lokasi tidak tersedia"}
-                      {item.district ? ` - ${item.district}` : ""}
-                    </div>
+                    {(item.regency || item.district) && (
+                      <div className="text-[11px] text-slate-500 group-hover:text-slate-400 mt-0.5 transition-colors">
+                        {item.regency || ""}
+                        {item.regency && item.district ? " - " : ""}
+                        {item.district || ""}
+                      </div>
+                    )}
                   </button>
                 </li>
               ))}

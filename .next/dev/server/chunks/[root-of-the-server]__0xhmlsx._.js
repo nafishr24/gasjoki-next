@@ -91,10 +91,14 @@ async function GET(request) {
             });
         }
         const result = await response.json();
-        const universities = (result.data || []).slice(0, 250).map((u)=>({
+        const universities = (result.data || []).slice(0, 250).map((u)=>{
+            // Robustly find a field that looks like a location/regency
+            const regencyField = Object.entries(u).find(([k, v])=>(k.toLowerCase().includes("regency") || k.toLowerCase().includes("city") || k.toLowerCase().includes("kabupaten") || k.toLowerCase().includes("kota")) && typeof v === "string");
+            return {
                 name: u.name,
-                regency: u.regency_name
-            }));
+                regency: regencyField ? regencyField[1] : ""
+            };
+        });
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
             is_success: true,
             data: universities
