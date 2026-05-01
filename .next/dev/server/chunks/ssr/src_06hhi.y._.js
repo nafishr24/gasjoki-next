@@ -1638,7 +1638,7 @@ function InstitutionSearch({ value, onChange }) {
     // Debounced API search
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (debounceRef.current) clearTimeout(debounceRef.current);
-        if (inputValue.length >= 5 && isOpen) {
+        if (inputValue.length >= 3 && isOpen) {
             setHasSearched(false);
             debounceRef.current = setTimeout(async ()=>{
                 setIsLoading(true);
@@ -1751,7 +1751,7 @@ function InstitutionSearch({ value, onChange }) {
                         value: inputValue,
                         onChange: handleInputChange,
                         onFocus: ()=>setIsOpen(true),
-                        placeholder: type === "university" ? "Ketik nama kampus (min. 5 huruf)..." : "Ketik nama sekolah (min. 5 huruf)...",
+                        placeholder: type === "university" ? "Ketik nama/singkatan kampus (min. 3 huruf)..." : "Ketik nama sekolah (min. 3 huruf)...",
                         className: "w-full bg-slate-800 border border-slate-700 rounded-xl pl-11 pr-10 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
@@ -1802,12 +1802,12 @@ function InstitutionSearch({ value, onChange }) {
             }, this),
             isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute z-50 left-0 right-0 mt-1.5 bg-slate-800/95 backdrop-blur-sm border border-slate-700 rounded-xl shadow-2xl shadow-black/40 max-h-60 overflow-y-auto",
-                children: inputValue.length < 5 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                children: inputValue.length < 3 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "px-4 py-3 text-center",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "text-xs text-slate-500 italic",
                         children: [
-                            "Ketik min. 5 huruf untuk mencari",
+                            "Ketik min. 3 huruf untuk mencari",
                             " ",
                             type === "university" ? "kampus" : "sekolah",
                             "..."

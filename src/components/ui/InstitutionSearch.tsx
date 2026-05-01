@@ -44,7 +44,7 @@ export default function InstitutionSearch({ value, onChange }: InstitutionSearch
   useEffect(() => {
     if (debounceRef.current) clearTimeout(debounceRef.current);
 
-    if (inputValue.length >= 5 && isOpen) {
+    if (inputValue.length >= 3 && isOpen) {
       setHasSearched(false);
       debounceRef.current = setTimeout(async () => {
         setIsLoading(true);
@@ -143,8 +143,8 @@ export default function InstitutionSearch({ value, onChange }: InstitutionSearch
           onFocus={() => setIsOpen(true)}
           placeholder={
             type === "university"
-              ? "Ketik nama kampus (min. 5 huruf)..."
-              : "Ketik nama sekolah (min. 5 huruf)..."
+              ? "Ketik nama/singkatan kampus (min. 3 huruf)..."
+              : "Ketik nama sekolah (min. 3 huruf)..."
           }
           className="w-full bg-slate-800 border border-slate-700 rounded-xl pl-11 pr-10 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
         />
@@ -169,10 +169,10 @@ export default function InstitutionSearch({ value, onChange }: InstitutionSearch
       {/* Dropdown */}
       {isOpen && (
         <div className="absolute z-50 left-0 right-0 mt-1.5 bg-slate-800/95 backdrop-blur-sm border border-slate-700 rounded-xl shadow-2xl shadow-black/40 max-h-60 overflow-y-auto">
-          {inputValue.length < 5 ? (
+          {inputValue.length < 3 ? (
             <div className="px-4 py-3 text-center">
               <p className="text-xs text-slate-500 italic">
-                Ketik min. 5 huruf untuk mencari{" "}
+                Ketik min. 3 huruf untuk mencari{" "}
                 {type === "university" ? "kampus" : "sekolah"}...
               </p>
             </div>

@@ -53,10 +53,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$serv
 async function GET(request) {
     const { searchParams } = new URL(request.url);
     const name = searchParams.get("name");
-    if (!name || name.length < 5) {
+    if (!name || name.length < 3) {
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
             is_success: false,
-            message: "Nama minimal 5 karakter"
+            message: "Nama minimal 3 karakter"
         }, {
             status: 400
         });
@@ -94,8 +94,9 @@ async function GET(request) {
         const universities = (result.data || []).slice(0, 250).map((u)=>{
             // Robustly find a field that looks like a location/regency
             const regencyField = Object.entries(u).find(([k, v])=>(k.toLowerCase().includes("regency") || k.toLowerCase().includes("city") || k.toLowerCase().includes("kabupaten") || k.toLowerCase().includes("kota")) && typeof v === "string");
+            const formattedName = u.short_name ? `${u.name} (${u.short_name})` : u.name;
             return {
-                name: u.name,
+                name: formattedName,
                 regency: regencyField ? regencyField[1] : ""
             };
         });

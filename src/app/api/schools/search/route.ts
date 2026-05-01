@@ -4,9 +4,9 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const name = searchParams.get("name");
 
-  if (!name || name.length < 5) {
+  if (!name || name.length < 3) {
     return NextResponse.json(
-      { is_success: false, message: "Nama minimal 5 karakter" },
+      { is_success: false, message: "Nama minimal 3 karakter" },
       { status: 400 }
     );
   }
