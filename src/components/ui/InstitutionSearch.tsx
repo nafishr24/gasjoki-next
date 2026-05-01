@@ -8,10 +8,16 @@ interface InstitutionSearchProps {
   onChange: (value: string) => void;
 }
 
+interface SearchResult {
+  name: string;
+  regency: string;
+  district?: string;
+}
+
 export default function InstitutionSearch({ value, onChange }: InstitutionSearchProps) {
   const [type, setType] = useState<"university" | "school">("university");
   const [inputValue, setInputValue] = useState(value);
-  const [results, setResults] = useState<string[]>([]);
+  const [results, setResults] = useState<SearchResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
@@ -181,14 +187,20 @@ export default function InstitutionSearch({ value, onChange }: InstitutionSearch
             </div>
           ) : results.length > 0 ? (
             <ul className="py-1">
-              {results.map((name, idx) => (
+              {results.map((item, idx) => (
                 <li key={idx}>
                   <button
                     type="button"
-                    onClick={() => handleSelect(name)}
-                    className="w-full text-left px-4 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors"
+                    onClick={() => handleSelect(item.name)}
+                    className="w-full text-left px-4 py-2.5 hover:bg-blue-600/20 transition-colors group"
                   >
-                    {name}
+                    <div className="text-sm text-slate-300 group-hover:text-white font-medium transition-colors">
+                      {item.name}
+                    </div>
+                    <div className="text-[11px] text-slate-500 group-hover:text-slate-400 mt-0.5 transition-colors">
+                      {item.regency || "Lokasi tidak tersedia"}
+                      {item.district ? ` - ${item.district}` : ""}
+                    </div>
                   </button>
                 </li>
               ))}

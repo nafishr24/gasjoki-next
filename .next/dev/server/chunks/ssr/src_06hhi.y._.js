@@ -1703,14 +1703,14 @@ function InstitutionSearch({ value, onChange }) {
                                 className: "w-4 h-4"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                                lineNumber: 109,
+                                lineNumber: 115,
                                 columnNumber: 11
                             }, this),
                             "Kampus"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                        lineNumber: 96,
+                        lineNumber: 102,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1726,20 +1726,20 @@ function InstitutionSearch({ value, onChange }) {
                                 className: "w-4 h-4"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                                lineNumber: 125,
+                                lineNumber: 131,
                                 columnNumber: 11
                             }, this),
                             "Sekolah"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                        lineNumber: 112,
+                        lineNumber: 118,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                lineNumber: 95,
+                lineNumber: 101,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1755,7 +1755,7 @@ function InstitutionSearch({ value, onChange }) {
                         className: "w-full bg-slate-800 border border-slate-700 rounded-xl pl-11 pr-10 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                        lineNumber: 132,
+                        lineNumber: 138,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1764,18 +1764,18 @@ function InstitutionSearch({ value, onChange }) {
                             className: "w-4 h-4 animate-spin text-blue-400"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                            lineNumber: 147,
+                            lineNumber: 153,
                             columnNumber: 13
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
                             className: "w-4 h-4"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                            lineNumber: 149,
+                            lineNumber: 155,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                        lineNumber: 145,
+                        lineNumber: 151,
                         columnNumber: 9
                     }, this),
                     inputValue && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1786,18 +1786,18 @@ function InstitutionSearch({ value, onChange }) {
                             className: "w-4 h-4"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                            lineNumber: 158,
+                            lineNumber: 164,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                        lineNumber: 153,
+                        lineNumber: 159,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                lineNumber: 131,
+                lineNumber: 137,
                 columnNumber: 7
             }, this),
             isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1814,12 +1814,12 @@ function InstitutionSearch({ value, onChange }) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                        lineNumber: 168,
+                        lineNumber: 174,
                         columnNumber: 15
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                    lineNumber: 167,
+                    lineNumber: 173,
                     columnNumber: 13
                 }, this) : isLoading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "p-3 space-y-2",
@@ -1831,34 +1831,54 @@ function InstitutionSearch({ value, onChange }) {
                             className: "h-9 bg-slate-700/40 animate-pulse rounded-lg"
                         }, i, false, {
                             fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                            lineNumber: 176,
+                            lineNumber: 182,
                             columnNumber: 17
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                    lineNumber: 174,
+                    lineNumber: 180,
                     columnNumber: 13
                 }, this) : results.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                     className: "py-1",
-                    children: results.map((name, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                    children: results.map((item, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 type: "button",
-                                onClick: ()=>handleSelect(name),
-                                className: "w-full text-left px-4 py-2.5 text-sm text-slate-300 hover:bg-blue-600/20 hover:text-white transition-colors",
-                                children: name
-                            }, void 0, false, {
+                                onClick: ()=>handleSelect(item.name),
+                                className: "w-full text-left px-4 py-2.5 hover:bg-blue-600/20 transition-colors group",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "text-sm text-slate-300 group-hover:text-white font-medium transition-colors",
+                                        children: item.name
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
+                                        lineNumber: 197,
+                                        columnNumber: 21
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "text-[11px] text-slate-500 group-hover:text-slate-400 mt-0.5 transition-colors",
+                                        children: [
+                                            item.regency || "Lokasi tidak tersedia",
+                                            item.district ? ` - ${item.district}` : ""
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
+                                        lineNumber: 200,
+                                        columnNumber: 21
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                                lineNumber: 186,
+                                lineNumber: 192,
                                 columnNumber: 19
                             }, this)
                         }, idx, false, {
                             fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                            lineNumber: 185,
+                            lineNumber: 191,
                             columnNumber: 17
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                    lineNumber: 183,
+                    lineNumber: 189,
                     columnNumber: 13
                 }, this) : hasSearched ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "px-4 py-3 text-center",
@@ -1867,23 +1887,23 @@ function InstitutionSearch({ value, onChange }) {
                         children: "Tidak ditemukan. Kamu bisa lanjut ketik manual."
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                        lineNumber: 198,
+                        lineNumber: 210,
                         columnNumber: 15
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                    lineNumber: 197,
+                    lineNumber: 209,
                     columnNumber: 13
                 }, this) : null
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-                lineNumber: 165,
+                lineNumber: 171,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ui/InstitutionSearch.tsx",
-        lineNumber: 93,
+        lineNumber: 99,
         columnNumber: 5
     }, this);
 }

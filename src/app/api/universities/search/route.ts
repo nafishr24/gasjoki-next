@@ -40,7 +40,10 @@ export async function GET(request: Request) {
     }
 
     const result = await response.json();
-    const universities = (result.data || []).slice(0, 250).map((u: any) => u.name);
+    const universities = (result.data || []).slice(0, 250).map((u: any) => ({
+      name: u.name,
+      regency: u.regency_name,
+    }));
 
     return NextResponse.json({ is_success: true, data: universities });
   } catch (error) {

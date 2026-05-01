@@ -39,7 +39,11 @@ export async function GET(request: Request) {
     }
 
     const result = await response.json();
-    const schools = (result.data || []).slice(0, 250).map((s: any) => s.name);
+    const schools = (result.data || []).slice(0, 250).map((s: any) => ({
+      name: s.name,
+      regency: s.regency_name,
+      district: s.district_name,
+    }));
 
     return NextResponse.json({ is_success: true, data: schools });
   } catch (error) {
